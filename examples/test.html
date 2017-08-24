@@ -1,0 +1,24 @@
+<html>
+<head>
+  <title>Test</title>
+</head>
+<body>
+  <!-- importing the automatically build module -->
+  <script src="../dist/mriraycaster.js"></script>
+
+  <p>Open Javascript console.</p>
+
+  <script>
+
+    // the foo object is part of our ES6MOD module
+    var foo = new mriraycaster.Foo(20, 30);
+
+    // do something with foo
+    foo.printAnAttribute();
+    foo.setAnAttribute(34)
+    foo.printAnAttribute();
+
+  </script>
+
+</body>
+</html>

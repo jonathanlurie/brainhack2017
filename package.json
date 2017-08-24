@@ -1,0 +1,33 @@
+{
+  "name": "mriraycaster",
+  "version": "0.1.0",
+  "description": "A starting point to create ES6 module for browser",
+  "main": "src/mriraycaster.js",
+  "repository": "jonathanlurie/mriraycaster",
+  "moduleName": "mriraycaster",
+  "moduleFormat": "umd",
+  "moduleBuildDir": "dist",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rollup -c",
+    "build-min": "npm run build && printf \"// Build date: $(date '+%Y-%m%-dT%H:%M:%S')\n\n\" > dist/mriraycaster.min.js && cat header.txt >> dist/mriraycaster.min.js && google-closure-compiler-js dist/mriraycaster.js >> dist/mriraycaster.min.js",
+    "doc": "documentation src/mriraycaster.js -o ./doc/ -f html"
+  },
+  "author": "Jonathan Lurie",
+  "license": "MIT",
+  "devDependencies": {
+    "documentation": "^3.0.4",
+    "google-closure-compiler-js": "^20170218.0.0",
+    "gulp": "^3.9.1",
+    "gulp-rollup": "^2.11.0",
+    "gulp-sourcemaps": "^2.4.1",
+    "rollup": "^0.36.4",
+    "rollup-plugin-commonjs": "^8.0.2",
+    "rollup-plugin-node-resolve": "^2.0.0"
+  },
+  "dependencies": {
+    "pixpipejs": "github:jonathanlurie/pixpipejs",
+    "rollup-plugin-node-builtins": "^2.1.2",
+    "rollup-plugin-node-globals": "^1.1.0"
+  }
+}
